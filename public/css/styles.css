@@ -56,23 +56,55 @@ a, .row:nth-child(3) a {
     third row: thing that has content/article, aside
     fourth row: footer 
  */
-@media only screen and (max-width: 640px) {
-  .row:nth-child(1) {
-    display: none; } }
+.row:nth-child(1) {
+  margin: auto;
+  max-width: 900px;
+  text-align: center;
+  background-color: #EFF9EC;
+  padding: 16px 0 16px 0; }
+  @media only screen and (max-width: 640px) {
+    .row:nth-child(1) {
+      display: none; } }
+  @media only screen and (min-width: 961px) {
+    .row:nth-child(1) {
+      margin-top: 50px; } }
+  .row:nth-child(1) .nav li {
+    display: inline-block; }
+    .row:nth-child(1) .nav li a {
+      padding-left: 15px;
+      padding-right: 15px; }
 
 .row:nth-child(2) {
-  background-color: #389FA8;
+  margin: auto;
+  max-width: 900px;
+  background-color: #EFF9EC;
+  border-top: 1px solid #57C1C7;
+  border-bottom: 1px solid #57C1C7;
   color: #57C1C7;
   text-transform: uppercase;
-  font-size: .7em;
   letter-spacing: .3em;
-  text-align: center;
-  padding: 8px 0; }
+  font-size: 1.1em;
+  text-align: center; }
+  @media only screen and (max-width: 640px) {
+    .row:nth-child(2) {
+      background-color: #389FA8;
+      font-size: .7em;
+      padding: 8px 0; } }
+  .row:nth-child(2) h1 {
+    padding: 36px 0; }
+    @media only screen and (max-width: 640px) {
+      .row:nth-child(2) h1 {
+        padding: 0; } }
 
 .row:nth-child(3) {
   background-color: #EFF9EC;
   padding: 40px;
+  margin: auto;
+  max-width: 900px;
   border-bottom: 1px solid #57C1C7; }
+  @media only screen and (min-width: 961px) {
+    .row:nth-child(3) {
+      padding: inherit; } }
   .row:nth-child(3) a {
     border-bottom: 1px dashed #57C1C7; }
   .row:nth-child(3) h2 {
@@ -82,20 +114,79 @@ a, .row:nth-child(3) a {
     margin: 8px 0 32px 0; }
   .row:nth-child(3) p {
     line-height: 1.5em; }
+    @media only screen and (min-width: 641px) and (max-width: 960px) {
+      .row:nth-child(3) p {
+        padding-bottom: 40px; } }
+  @media only screen and (min-width: 961px) {
+    .row:nth-child(3) .content {
+      display: block;
+      float: left;
+      width: 70%;
+      padding: 40px;
+      box-sizing: border-box;
+      border-right: 1px solid #57C1C7; } }
   @media only screen and (max-width: 640px) {
     .row:nth-child(3) aside {
       display: none; } }
+  @media only screen and (min-width: 961px) {
+    .row:nth-child(3) aside {
+      display: block;
+      float: right;
+      width: 30%;
+      padding: 40px;
+      box-sizing: border-box; } }
+  .row:nth-child(3) aside a {
+    border-bottom: none; }
+  .row:nth-child(3) aside h4 {
+    color: #389FA8;
+    font-size: 1.3em; }
+    @media only screen and (min-width: 641px) and (max-width: 960px) {
+      .row:nth-child(3) aside h4 {
+        padding: 40px 0 10px 0; } }
+    @media only screen and (min-width: 961px) {
+      .row:nth-child(3) aside h4 {
+        padding: 0 0 10px 0; } }
+  .row:nth-child(3) aside .read_more {
+    text-align: center;
+    display: block;
+    padding: 20px 0;
+    background-color: #389FA8;
+    color: #57C1C7; }
+    @media only screen and (min-width: 961px) {
+      .row:nth-child(3) aside .read_more {
+        margin-top: 40px; } }
 
 footer {
   background-color: #EFF9EC;
-  padding: 24px 0; }
-  @media only screen and (max-width: 640px) {
-    footer .left {
-      display: none; } }
+  padding: 24px 0;
+  margin: auto;
+  max-width: 900px; }
+  @media only screen and (min-width: 961px) {
+    footer {
+      margin-bottom: 50px; } }
+  footer .left {
+    display: block;
+    float: right;
+    padding-right: 40px; }
+    @media only screen and (max-width: 640px) {
+      footer .left {
+        display: none; } }
+    @media only screen and (min-width: 641px) and (max-width: 960px) {
+      footer .left {
+        display: none; } }
   footer .right {
-    text-align: center; }
+    text-align: center;
+    display: block;
+    float: left; }
+    @media only screen and (min-width: 961px) {
+      footer .right {
+        padding-left: 40px; } }
     footer .right .footer_links li {
       display: inline-block; }
+      @media only screen and (min-width: 641px) and (max-width: 960px) {
+        footer .right .footer_links li a {
+          padding-left: 5px;
+          padding-right: 5px; } }
 
 /*
 - the max-width of the center content is 900px;
@@ -116,4 +207,22 @@ footer {
     28px under nav
 
     padding-left + padding-right: 40px
+ 
+
+  top to bottom:
+    16 nav 20
+    36 h1 38
+
+    50 text 90
+
+    News 20 Braindead
+
+    Braindead 48 Read More box
+
+    20 read more 22
+      40 width
+
+    40 container
+
+    24 bottom-nav 26
  */
