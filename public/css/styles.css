@@ -137,6 +137,8 @@ a, .row:nth-child(3) a {
       box-sizing: border-box; } }
   .row:nth-child(3) aside a {
     border-bottom: none; }
+    .row:nth-child(3) aside a:hover {
+      color: #EFF9EC; }
   .row:nth-child(3) aside h4 {
     color: #389FA8;
     font-size: 1.3em; }
@@ -176,17 +178,19 @@ footer {
         display: none; } }
   footer .right {
     text-align: center;
-    display: block;
-    float: left; }
+    display: block; }
     @media only screen and (min-width: 961px) {
       footer .right {
-        padding-left: 40px; } }
+        padding-left: 40px;
+        float: left; } }
     footer .right .footer_links li {
       display: inline-block; }
-      @media only screen and (min-width: 641px) and (max-width: 960px) {
-        footer .right .footer_links li a {
-          padding-left: 5px;
-          padding-right: 5px; } }
+      footer .right .footer_links li a {
+        padding-left: 5px;
+        padding-right: 5px; }
+        @media only screen and (min-width: 961px) {
+          footer .right .footer_links li a {
+            padding: 0 10px 0 0; } }
 
 /*
 - the max-width of the center content is 900px;

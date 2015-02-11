@@ -164,6 +164,10 @@ a {
 
     a {
       border-bottom: none;
+
+      &:hover {
+        color: $light-color;
+      }
     }
 
     h4 {
@@ -220,19 +224,21 @@ footer {
   .right {
     text-align: center;
     display: block;
-    float: left;
 
     @media #{$large-up} {
       padding-left: $padding;
+      float: left;
     }
 
     .footer_links li {
       display: inline-block;
 
       a {
-        @media #{$medium-only} {
-         padding-left: 5px;
-         padding-right: 5px;
+        padding-left: 5px;
+        padding-right: 5px;
+
+        @media #{$large-up} {
+          padding: 0 10px 0 0;
         }
       }
     }
