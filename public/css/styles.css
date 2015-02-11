@@ -1,2 +1,119 @@
+@import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700.css);
+.clearfix:after {
+  content: " ";
+  /* Older browser do not support empty content */
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both; }
+
+/* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, .row:nth-child(3) a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
 body {
-  background: #333333; }
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+html {
+  font-family: 'Droid Serif', serif;
+  font-size: 16px;
+  background-color: transparent; }
+  @media only screen and (min-width: 961px) {
+    html {
+      background-color: #45B5BC; } }
+
+a, .row:nth-child(3) a {
+  color: #101C2F;
+  text-decoration: none; }
+  a:hover, .row:nth-child(3) a:hover {
+    color: #389FA8; }
+
+/*
+  NOTES FOR FUTURE JACKIE:
+    first row: nav
+    second row: thing that has h1
+    third row: thing that has content/article, aside
+    fourth row: footer 
+ */
+@media only screen and (max-width: 640px) {
+  .row:nth-child(1) {
+    display: none; } }
+
+.row:nth-child(2) {
+  background-color: #389FA8;
+  color: #57C1C7;
+  text-transform: uppercase;
+  font-size: .7em;
+  letter-spacing: .3em;
+  text-align: center;
+  padding: 8px 0; }
+
+.row:nth-child(3) {
+  background-color: #EFF9EC;
+  padding: 40px;
+  border-bottom: 1px solid #57C1C7; }
+  .row:nth-child(3) a {
+    border-bottom: 1px dashed #57C1C7; }
+  .row:nth-child(3) h2 {
+    font-size: 2em; }
+  .row:nth-child(3) h3 {
+    color: #389FA8;
+    margin: 8px 0 32px 0; }
+  .row:nth-child(3) p {
+    line-height: 1.5em; }
+  @media only screen and (max-width: 640px) {
+    .row:nth-child(3) aside {
+      display: none; } }
+
+footer {
+  background-color: #EFF9EC;
+  padding: 24px 0; }
+  @media only screen and (max-width: 640px) {
+    footer .left {
+      display: none; } }
+  footer .right {
+    text-align: center; }
+    footer .right .footer_links li {
+      display: inline-block; }
+
+/*
+- the max-width of the center content is 900px;
+- the columns are 70% / 30%
+ */
+/*
+  MOAR SIZES:
+    28px height
+    10 padding top + bottom
+
+    44px top (under header)
+
+    50px under author/before article text
+
+    50px under text content (before line)
+
+    24px under line, before nav
+    28px under nav
+
+    padding-left + padding-right: 40px
+ */

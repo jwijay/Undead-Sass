@@ -1,5 +1,143 @@
-$dark-color : #333333;
+@import "partials/reset";
+@import "http://fonts.googleapis.com/css?family=Droid+Serif:400,700.css";
 
-body {
-  background: $dark-color;
+// Base Font Size
+
+$base-size : 16px;
+$base-font : 'Droid Serif', serif;
+
+// Media Queries
+
+$small-only: "only screen and (max-width: 640px)";
+$medium-only: "only screen and (min-width: 641px) and (max-width: 960px)";
+$large-up: "only screen and (min-width: 961px)";
+
+// Colors
+
+$dark-color: #14273D;
+$medium-color: #389FA8;
+$medium-light-color: #57C1C7;
+$light-color: #EFF9EC;
+$teal: #45B5BC;
+$link-color: #101C2F;
+
+// Standard Padding
+
+$padding: 40px;
+
+html {
+  font-family: $base-font;
+  font-size: $base-size;
+  background-color: transparent;
+
+  @media #{$large-up} {
+    background-color: $teal;
+  }
 }
+
+a {
+  color: $link-color;
+  text-decoration: none;
+
+  &:hover {
+    color: $medium-color;
+  }
+}
+/*
+  NOTES FOR FUTURE JACKIE:
+    first row: nav
+    second row: thing that has h1
+    third row: thing that has content/article, aside
+    fourth row: footer 
+ */
+
+.row:nth-child(1) {
+  @media #{$small-only} {
+    display: none;
+  }
+}
+
+.row:nth-child(2) {
+  background-color: $medium-color;
+  color: $medium-light-color;
+  text-transform: uppercase;
+  font-size: .7em;
+  letter-spacing: .3em;
+  text-align: center;
+  padding: 8px 0;
+}
+
+.row:nth-child(3) {
+  background-color: $light-color;
+  padding: $padding;
+  border-bottom: 1px solid $medium-light-color;
+
+  a {
+    @extend a;
+    border-bottom: 1px dashed $medium-light-color;
+  }
+
+  h2 {
+    font-size: 2em
+  }
+  
+  h3 {
+    color: $medium-color;
+    margin: 8px 0 32px 0;
+  }
+
+  p {
+    line-height: 1.5em;
+  }
+
+  aside {
+    @media #{$small-only} {
+     display: none;
+    }
+  }
+}
+
+footer {
+  background-color: $light-color;
+  padding: 24px 0;
+
+  .left {
+    @media #{$small-only} {
+      display: none;
+    }
+  }
+
+  .right {
+    text-align: center;
+
+    .footer_links li {
+      display: inline-block;
+    }
+  }
+
+
+}
+
+
+
+/*
+- the max-width of the center content is 900px;
+- the columns are 70% / 30%
+ */
+
+/*
+  MOAR SIZES:
+    28px height
+    10 padding top + bottom
+
+    44px top (under header)
+
+    50px under author/before article text
+
+    50px under text content (before line)
+
+    24px under line, before nav
+    28px under nav
+
+    padding-left + padding-right: 40px
+ */
